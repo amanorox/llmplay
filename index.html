@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>LLM Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="main.js" type="module"></script>
+</head>
+<body>
+<h1>言語モデルを使って文章を作ろう</h1>
+<div>Powered by <a href="https://huggingface.co/Qwen/Qwen2.5-0.5B">Qwen2.5-0.5B</a></div>
+<div id="debug"></div>
+<label>
+  入力欄に文章を入力し、開始ボタンを押すと、続きの文章の作成が始まります：<br>
+  <input id="start-text" type="text" size="80">
+</label>
+<button id="btn-start">開始</button>
+<div>もしくは、以下から選んでください。</div>
+<div id="output" style="border-radius: 1em; padding: 0.3em; border: solid 1px gray;"></div>
+<div>
+  <canvas id="llm-next-words" width="800" height="1000"></canvas>
+</div>
+</body>
+</html>
