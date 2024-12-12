@@ -77,7 +77,7 @@ async function predictNextToken( text ){
     let values = [];
     for( let i = 0; i < 50; i++ ){
         let token = sortedIndexes[i];
-        let s = g_tokenizer.decode( [token], {skip_special_tokens: true} );
+        let s = g_tokenizer.decode( [token], {skip_special_tokens: false} );
         labels.push( s );
         values.push( probs[token] );
     }
